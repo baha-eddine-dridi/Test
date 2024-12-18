@@ -1,0 +1,9 @@
+
+<div *ngFor="let archive of listeArchive">
+    <div *ngIf="archive.archived==1">
+  <h4>title:{{archive.title}}</h4>
+
+  <img [src]="archive.coverPicture">
+ 
+</div>
+</div>

@@ -1,0 +1,21 @@
+<p>add-menu works!</p>
+<form #f="ngForm" (ngSubmit)="addAlbum(album)">
+    <h1>titre</h1>
+    <input type="text" name="titre" placeholder="titre" [(ngModel)]="album.title"required #titre="ngModel" pattern="[A-Z],[0-9]">
+  <div *ngIf="titre.invalid && (titre.dirty || titre.touched)" class="alert alert-danger">
+    <div *ngIf="titre.errors!['required']">
+      titre obligatoire
+    </div>
+    <div *ngIf="titre.errors!['pattern']">
+        Le titre ne doit contenir que des lettres ou des chiffres
+      </div>
+    </div>
+    <h1>photo de couverture</h1>
+    <input type="text" name="description" placeholder="description" [(ngModel)]="album.coverPicture"  minlength="5" #description="ngModel">
+    <div *ngIf="description.invalid && (description.dirty || description.touched)" class="alert alert-danger">
+      <div *ngIf="description.errors!['minlength']">
+        Minimum 5 caractères
+      </div>
+    </div>
+    <button type="submit" [disabled]="f.invalid">add</button>
+</form>

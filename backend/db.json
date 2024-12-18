@@ -1,0 +1,19 @@
+{
+ "albums":[
+  {
+   "id":"1",
+   "title":"baha",
+   "creationDate":"12-02-2024",
+   "archived":0,
+   "coverPicture":"../../../assets/baha.png"
+  },
+  {
+    "id":"2",
+    "title":"Anniversaire",
+    "creationDate":"12-02-2025",
+    "archived":1,
+    "coverPicture":"../../src/assets/baha.png"
+   }
+ ]
+  
+}
